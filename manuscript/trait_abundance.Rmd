@@ -1,0 +1,71 @@
+---
+title: "Demography, abundance and traits"
+author: "Andy Kleinhesselink"
+date: "January 25, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Abstract
+
+Functional ecology proposes that species' abundance can be predicted with knowledge of key functional traits that species possess. This would be the case if functional traits control species' fitness and response to intra- and interspecific competition. While many studies have shown correlations between species' abundance and functional traits, few studies have drawn a more mechanistic link between the two by showing that the functional traits that most strongly control fitness and the response to competition are also those that are most strongly related to local abundance. 
+
+In this study we use experimental data on the performance of 20 species to find the combination of functional traits that are most strongly correlated with species' fitness and response to competitors. We then test whether these same traits can predict which species are abundant in natural communities containing different species. 
+
+## Introduction
+
+
+## Environmental and Community Data  
+
+We conducted our study at the UC Santa Barbara Sedgwick Reserve (34^$\circ$^
+40' N, 120^$\circ$^ 00', W ele. 730) in California, USA. This is a Mediterranean climate with the majority of precipitation falling between November and March. We sampled vegetation communities at 24 sites positioned across the reserve on communities dominated by annual plants (Fig. 1) . Sites were chosen haphazardly to span a range of soil types and microclimates. Sixteen sites were choosen in an upper grassland environment surounding a previously used experimental garden [@levine_importance_2009] and eight were choosen in the lower 3/4 of the reserve (Fig. 1A).  The upper sites are characterized by serpentine soils with a low CA to Mg ratio. Of the upper sites, ten were choosen on rocky serpentine hummocks defined as having convex topography and rocky soil with pieces of exposed serpentenite. Six upper sites were positioned in non-hummock environments, defined by flat or concave topography and thick clay soils (Fig. 1B).
+
+![**Figure 1. Map of Sedgwick Reserve with research sites. A) overview of all 24 research sites including 8 spread out across the central part of the reserve.  The upper 16 sites are within the black box in the NE corner of the reserve. B) The 16 upper sites found in serpentine soil. Some sites are found on rocky hummocks dominated by native annuals and others are found on flat areas with clay soil dominated by tall exotic annual grasses.** ](../figures/sedgwick_map.png)
+
+In the spring of 2016, we collected 1 L of soil from the upper five cm of the soil surface at each site and sent 0.5 L to XX labs for soil texture and chemical analyses. In addition, we periodically collected soil samples from each site and recorded wet weight as well as the dry weight after drying in a drying oven at 60 C$^\circ$^ for 48 hours. From this we calculated gravimetric soil moisture content. We installed thermochron iButtons (Maxim Integrated, San Jose, CA, USA) at each site set to log temperature every 2 hours from February to May.  We placed iButtons in short sections of 2 cm diameter white PVC pipe and these were fixed to the soil surface [@spasojevic_above-_2014]. 
+
+In the spring of 2017, we marked 5 0.25 m^2^ sampling plots at each site.  Plots were spaced roughly 10 m apart along a 10 m transect running in a north south direction. We positioned plots on areas dominated by annual plants, avoiding large shrubs, perennial grasses and rocks. To determine soil depth, we drove a heavy steel rod into the soil in each of the plots and recorded the depth at which the rod hit bedrock. In late March of 2017, we visually estimated absolute percent cover of each species in each plot. Visual estimates were made by a single observer and all sites were measured within a few days of one another.  Another round of visual cover estimates were collected in late May in order to capture the maximum cover of species with later phenology. We used a Licor XXX light meter (Li-Cor, USA) to take two measurements of photosynthetically active radiation (PAR) at 1.5 m above each plot as well as at the soil surface in each plot. Light measurements were condected between 10 AM and 3 PM under clear conditions on June XX. From these light measurements we calculated the percent light use by the vegetation in each community as intensity of light reaching the soil surface divided by the light at 1.5 m. 
+
+## Species performance data 
+
+We used data on the demographic performance of 20 species collected by Kraft et al. (2015). In this study each species was grown in the absence of all competition and in a range of densities of each other species, including itself. All experiments were conducted in the common garden at the upper site (Fig. 1 A). 
+
+This allowed for the calculation of species specific per capita maximum seed production $\lambda_i$, germination rate $g_i$, seed survival rate $s_i$, as well interaction coefficients for the effect of each species' density on each other species per capita fecundity $\alpha_ij$. 
+
+## Trait data 
+
+We obtained trait data for 60 of the most common species at our sampling sites (Table S1). For 20 of these species we used trait data that had already been collected by for Kraft et al. [-@kraft_plant_2015]. For the remainder of the species we collected trait data from individual plants found at the field sites during the spring of 2017. 
+
+To quantify species' height, we measured the height of 40 reproductively mature individuals per species in the field and then took the 95th percentile of these measurements. We haphazardly selected an additional five to ten reproductively mature plants per species for functional trait sampling.  On each individual we measured the height and the lateral spread of the canopy as viewed from above (taking one measurement of the longest distance across the canopy, and then another measurement at a 90^$\circ$^ angle to that). We then harvested the aboveground and belowground material from each individual. We washed belowground biomass in water to remove soil and then stored samples of fine roots in vials of ethanol for later processing. 
+
+We divided aboveground biomass into leaves and non-leaves. Within 24 h of harvesting the selected plants, we selected three healthy leaves per plant, weighed them individually and then scanned each leaf on a flatbed scanner. We used imageJ to calculate the surface area of each leaf in cm^2^. The three scanned leaves, all other leaves, and all other aboveground parts were then put in separate envelopes and dried at 60^$\circ$^C for 48 hours and weighed to the nearest miligram. We removed leaf petioles from leaves prior to weighing and scanning. We ground 1 g of dry leaf material per species into a fine powder and sent this to the Center for Stable Isotope Biogeochemistry at the University of California, Berkeley for measurement of C and N concentrations and $\delta$ 13C. 
+
+We rinsed fine root samples in water and scanned on a flatbed scanner using the WinRhizo root scanning system (Regent Instruments). We then WinRhizo software to measure the length of fine roots in the scanned images. We then dried the scanned roots at 60^$\circ$^C for 48 hours and weighed to the nearest miligram. 
+
+We collected seeds from 10 to 20 individuals in the field for measurement of seed size.  After removing dispersal structures we dried 100 seeds per species at 60^$\circ$^C for 48 hours, weighed to the nearest miligram and then calculated average mass per seed in mg. For a number of the species in our study we used seed weights measured by a previous study also conducted at this reserve [@molinari_structural_2014].  And for a few additional species, we used seeds weight data from the BIEN trait database [@maitner_bien_2018]. 
+
+In addition to the above traits, we also periodically recorded the proportion of individuals of each species that were in vegetative, flowering and fruiting phenophases in our study plots.  Because most of our species were found at more than one site, we choose the site where each species was most abundant to make these phenological measurements. We quantified each species' phenology as the day of the year in which 50% of individuals in a population had started fruiting [@kraft_plant_2015]. 
+
+After collecting the raw measurements described above we calculated 12 standard functional traits following standard protocols (Table S2; @perez-harguindeguy_new_2013, @cornelissen_handbook_2003). 
+
+
+
+
+## Analysis 
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
