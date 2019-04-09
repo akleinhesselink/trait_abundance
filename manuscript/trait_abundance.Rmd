@@ -31,7 +31,7 @@ In the spring of 2017, we marked 5 0.25 m^2^ sampling plots at each site.  Plots
 
 ## Species performance data 
 
-We used data on the demographic performance of 20 species collected by Kraft et al. (2015). In this study each species was grown in the absence of all competition and in a range of densities of each other species, including itself. All experiments were conducted in the common garden at the upper site (Fig. 1 A). 
+We used data on the demographic performance of 20 species collected by Kraft et al. (2015). In this study each species was grown in the absence of all competition and in a range of densities of each other species, including itself. All experiments were conducted in the common garden at the upper site (Fig. 1B). 
 
 This allowed for the calculation of species specific per capita maximum seed production $\lambda_i$, germination rate $g_i$, seed survival rate $s_i$, as well interaction coefficients for the effect of each species' density on each other species per capita fecundity $\alpha_ij$. 
 
@@ -51,10 +51,13 @@ In addition to the above traits, we also periodically recorded the proportion of
 
 After collecting the raw measurements described above we calculated 12 standard functional traits following standard protocols (Table S2; @perez-harguindeguy_new_2013, @cornelissen_handbook_2003). 
 
-
-
-
 ## Analysis 
+
+In order to establish a clear link between species demographic performance and species abundance, we simulated population dynamics of multispecies communities composed of the 20 species for which we had demographic data.  In each simulation we tracked the total abundance (number of individuals including seeds in the seed bank) and the annual per capita seed production of each species for 10 years. In each simulation we started all species at low initial abundance. 
+
+We then took each species final abundance as 
+
+
 
 ```{r cars}
 summary(cars)

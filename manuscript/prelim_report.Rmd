@@ -1,0 +1,71 @@
+---
+title: "Abundance by Demography Correlations"
+output:
+  pdf_document: default
+  html_notebook: default
+  
+fig_width: 6 
+fig_height: 7
+---
+
+## Summary: 
+The goal is to examine whether the focal species abundances in the natural plant communities located at the 24 common garden sites are related to the demographic rates and traits of the species measured in the TAPIOCA experiment.  
+
+Abundance is quantified as each species total cover.  In the plots below each species abundance is expressed as its rank among only TAPIOCA focal species.  The species are ranked separately for the reserve as a whole, for the upper sites, lower sites, the upper hummock, and upper non-hummock.  
+
+The observed abundance rank is compared to the following demographic parameters and traits: 
+
+| predictor   | definition        
+|------------:|:------------------------------------------------
+|$\lambda$    | seed production rate per mature plant 
+| $g$         | germination rate 
+| $s$         | seed survival rate
+|$\alpha_{ii}$  | intraspecific competition 
+|pred_abu     | average predicted abundance across all possible feasible communities
+|pred_abu2    | predicted monoculture abundance 
+|ndd_mean     | average negative density dependence 
+|pred_rank_fd | average pairwise fitness difference (number of times it is the inferior competitor)
+|max_height   | maximum plant height in cm
+|seed_mass    | seed_mass in g
+|CN_ratio     | leaf tissue C to N ratio 
+|leaf_size    | leaf size in cm^2^
+
+In order to match the scaling of the abundance ranks, the demographic parameters and traits are expressed as ranks rather than as raw values.  
+
+
+```{r, echo=F, message = F, warning = F}
+rm(list = ls())
+library(tidyverse)
+load('../output/correlation_plots.rda')
+```
+
+## Figures 
+
+```{r, echo = F}
+gg_reserve + ggtitle('Reserve-wide Abundance')
+
+```
+**Fig 1. Abundance observed vs. abundance predicted across all 24 sites. Y-axis is rank of observed average abundance of the TAPIOCA focal species. X-axis is the rank of each predictor statistic. Each panel shows the correlation of observed rank abundance with a different demographic predictor or trait. Species with zero abundance, i.e. were not found in any natural community, are not shown. The correlation statistic $r$ and the p-value for each correlation are shown.** 
+
+```{r, echo = F}
+gg_lower + ggtitle('Lower site abundance')
+
+```
+**Fig 2. Abundance observed vs. abundance predicted across the lower sites. Y-axis is rank of observed average abundance of the TAPIOCA focal species. X-axis is the rank of each predictor statistic. Each panel shows the correlation of observed rank abundance with a different demographic predictor or trait. Species with zero abundance, i.e. species that did not occur in the lower sites, are not shown. The correlation statistic $r$ and the p-value for each correlation are shown.** 
+
+
+```{r, echo = F}
+gg_upper + ggtitle('Upper site abundance')
+```
+**Fig 3. Abundance observed vs. abundance predicted across the upper sites. Y-axis is rank of observed average abundance of the TAPIOCA focal species. X-axis is the rank of each predictor statistic. Each panel shows the correlation of observed rank abundance with a different demographic predictor or trait. Species with zero abundance, i.e. species that did not occur in the upper sites, are not shown. The correlation statistic $r$ and the p-value for each correlation are shown.** 
+
+```{r, echo = F, message=FALSE, warning=FALSE}
+gg_hummock + ggtitle('Hummock site abundance')
+```
+**Fig 4. Abundance observed vs. abundance predicted across the upper hummock sites. Y-axis is rank of observed average abundance of the TAPIOCA focal species. X-axis is the rank of each predictor statistic. Each panel shows the correlation of observed rank abundance with a different demographic predictor or trait. Species with zero abundance, i.e. species that did not occur in the upper hummock sites, are not shown. The correlation statistic $r$ and the p-value for each correlation are shown.** 
+
+```{r, echo = F}
+gg_upper_nonhummock + ggtitle('Upper non-hummock site abundance')
+```
+**Fig 4. Abundance observed vs. abundance predicted across the upper non-hummock sites. Y-axis is rank of observed average abundance of the TAPIOCA focal species. X-axis is the rank of each predictor statistic. Each panel shows the correlation of observed rank abundance with a different demographic predictor or trait. Species with zero abundance, i.e. species that did not occur in the non-hummock upper sites, are not shown. The correlation statistic $r$ and the p-value for each correlation are shown.** 
+
